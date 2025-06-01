@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maxine Mutasam is a Junior Software Engineer specializing in Laravel, Vue.js, and Tailwind CSS with experience in Django and an emerging passion for UI/UX design.">
+    <title>Maxine Mutasa – Junior Software Engineer & Aspiring UI/UX Designer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5', // Indigo-600
+                        secondary: '#10B981', // Emerald-500
+                    },
+                    fontFamily: {
+                        'heading': ['Inter', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-body bg-white text-gray-900">
+    <!-- Header & Navigation -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-heading font-bold text-primary">Maxine M.</a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+            
+            <!-- Mobile Navigation Button -->
+            <button class="md:hidden" aria-label="Toggle menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="fixed inset-0 bg-white/95 z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#about" class="text-2xl hover:text-primary transition-colors">About</a>
+            <a href="#experience" class="text-2xl hover:text-primary transition-colors">Experience</a>
+            <a href="#projects" class="text-2xl hover:text-primary transition-colors">Projects</a>
+            <a href="#contact" class="text-2xl hover:text-primary transition-colors">Contact</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 text-white px-4">
+            <div class="text-center space-y-6">
+                <h1 class="text-4xl md:text-6xl font-heading font-bold">Hi, I'm Maxine Mutasa</h1>
+                <h2 class="text-2xl md:text-3xl font-heading text-gray-300">Junior Software Engineer & Aspiring UI/UX Designer</h2>
+                <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+                    Building modern web experiences with Django, Laravel, Vue.js, and Tailwind CSS.
+                </p>
+                <a href="#projects" class="inline-block px-8 py-3 bg-primary hover:bg-primary/90 text-white rounded-full transform hover:scale-105 transition-all duration-300">
+                    View My Work
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-4 bg-white">
+            <div class="container mx-auto max-w-6xl">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="flex justify-center">
+                        <div class="w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
+                            <!-- Placeholder for headshot -->
+                            <div class="w-full h-full bg-gray-200 flex items-center justify-center">
+                                <span class="text-gray-400">Headshot Placeholder</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-heading font-bold">About Me</h2>
+                        <div class="space-y-4 text-gray-600">
+                            <p>
+                                During my internship at Nubiacom, I collaborated on a customer engagement platform built with Django and Vue.js. I implemented REST endpoints, optimized database queries, and designed intuitive UI components, improving page-load times by 20%.
+                            </p>
+                            <p>
+                                At Magetsi, I build and maintain event-ticketing and bill-payment modules using Laravel for APIs and Vue.js for dynamic front-end interactions. I style components with Tailwind CSS, integrate responsive layouts, and leverage Bootstrap to ensure consistent cross-browser compatibility. I also create UX wireframes and prototypes to streamline user journeys.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-gray-100 rounded-full text-sm hover:bg-primary hover:text-white transition-colors">💻 Django</span>
+                            <span class="px-4 py-2 bg-gray-100 rounded-full text-sm hover:bg-primary hover:text-white transition-colors">🔧 Laravel</span>
+                            <span class="px-4 py-2 bg-gray-100 rounded-full text-sm hover:bg-primary hover:text-white transition-colors">⚛ Vue.js</span>
+                            <span class="px-4 py-2 bg-gray-100 rounded-full text-sm hover:bg-primary hover:text-white transition-colors">🎨 Tailwind CSS</span>
+                            <span class="px-4 py-2 bg-gray-100 rounded-full text-sm hover:bg-primary hover:text-white transition-colors">📐 Bootstrap 5</span>
+                            <span class="px-4 py-2 bg-gray-100 rounded-full text-sm hover:bg-primary hover:text-white transition-colors">🖊 UX Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 px-4 bg-gray-50">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl font-heading font-bold text-center mb-12">Experience</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Nubia.com Experience -->
+                    <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-transform">
+                        <h3 class="text-xl font-heading font-semibold">Software Developer Intern</h3>
+                        <p class="text-primary font-medium">Nubia.com</p>
+                        <p class="text-gray-500 mb-4">June 2023 – August 2023</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Built Django REST API endpoints for user profiles and notifications
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Developed reusable Vue.js UI components (modals, data tables)
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Optimized PostgreSQL queries, reducing average response time by 20%
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Magetsi Experience -->
+                    <div class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-transform">
+                        <h3 class="text-xl font-heading font-semibold">Junior Software Engineer</h3>
+                        <p class="text-primary font-medium">Magetsi</p>
+                        <p class="text-gray-500 mb-4">September 2023 – Present</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Implemented Laravel controllers and database migrations for event-management workflows
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Created dynamic, real-time Vue.js pages for ticket purchasing and transaction history
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Styled all front-end components with Tailwind CSS and Bootstrap 4 & 5
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Collaborated on UX wireframes and interactive prototypes
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-4 bg-white">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl font-heading font-bold text-center mb-12">Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="group relative bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+                            <!-- Placeholder for project screenshot -->
+                            <div class="w-full h-full flex items-center justify-center">
+                                <span class="text-gray-400">Project Screenshot</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-heading font-semibold mb-2">Magetsi Event Dashboard</h3>
+                            <p class="text-gray-600 mb-4">A comprehensive dashboard for managing events and ticket sales.</p>
+                            <div class="flex space-x-4 mb-4">
+                                <span class="text-sm text-gray-500">Laravel</span>
+                                <span class="text-sm text-gray-500">Vue.js</span>
+                                <span class="text-sm text-gray-500">Tailwind</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-primary hover:text-primary/80 transition-colors">View Code</a>
+                                <a href="#" class="text-primary hover:text-primary/80 transition-colors">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="group relative bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+                            <!-- Placeholder for project screenshot -->
+                            <div class="w-full h-full flex items-center justify-center">
+                                <span class="text-gray-400">Project Screenshot</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-heading font-semibold mb-2">Customer Portal</h3>
+                            <p class="text-gray-600 mb-4">A Django-based customer engagement platform with Vue.js frontend.</p>
+                            <div class="flex space-x-4 mb-4">
+                                <span class="text-sm text-gray-500">Django</span>
+                                <span class="text-sm text-gray-500">Vue.js</span>
+                                <span class="text-sm text-gray-500">PostgreSQL</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-primary hover:text-primary/80 transition-colors">View Code</a>
+                                <a href="#" class="text-primary hover:text-primary/80 transition-colors">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="group relative bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+                            <!-- Placeholder for project screenshot -->
+                            <div class="w-full h-full flex items-center justify-center">
+                                <span class="text-gray-400">Project Screenshot</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-heading font-semibold mb-2">Bill Payment System</h3>
+                            <p class="text-gray-600 mb-4">A secure and efficient bill payment processing system.</p>
+                            <div class="flex space-x-4 mb-4">
+                                <span class="text-sm text-gray-500">Laravel</span>
+                                <span class="text-sm text-gray-500">Vue.js</span>
+                                <span class="text-sm text-gray-500">Bootstrap 5</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-primary hover:text-primary/80 transition-colors">View Code</a>
+                                <a href="#" class="text-primary hover:text-primary/80 transition-colors">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UI/UX Showcase Section -->
+        <section id="uiux" class="py-20 px-4 bg-gray-50">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl font-heading font-bold text-center mb-12">UI/UX Showcase</h2>
+                <div class="relative">
+                    <div class="overflow-hidden">
+                        <div class="flex transition-transform duration-500 ease-in-out">
+                            <!-- Slide 1 -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div class="bg-white rounded-lg shadow-md p-6">
+                                    <div class="aspect-w-16 aspect-h-9 bg-gray-200 mb-4">
+                                        <div class="w-full h-full flex items-center justify-center">
+                                            <span class="text-gray-400">Wireframe 1</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-center text-gray-600">Low-fidelity wireframe for a dashboard UI</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation Arrows -->
+                    <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-4 bg-white">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl font-heading font-bold text-center mb-12">Get in Touch</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="space-y-6">
+                        <form id="contactForm" class="space-y-6">
+                            <div class="relative">
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" required>
+                                <label for="name" class="absolute left-4 top-2 text-gray-500 transition-all pointer-events-none">Name</label>
+                            </div>
+                            <div class="relative">
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" required>
+                                <label for="email" class="absolute left-4 top-2 text-gray-500 transition-all pointer-events-none">Email</label>
+                            </div>
+                            <div class="relative">
+                                <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" required>
+                                    <option value="">Select Subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="collaboration">Collaboration</option>
+                                    <option value="project">UI/UX Project</option>
+                                </select>
+                            </div>
+                            <div class="relative">
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" required></textarea>
+                                <label for="message" class="absolute left-4 top-2 text-gray-500 transition-all pointer-events-none">Message</label>
+                            </div>
+                            <button type="submit" class="w-full px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transform hover:scale-105 transition-all duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium">Email</h3>
+                                    <a href="mailto:maxine@example.com" class="text-gray-600 hover:text-primary transition-colors">maxine@example.com</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium">LinkedIn</h3>
+                                    <a href="https://linkedin.com/in/maxine-mutasam" target="_blank" class="text-gray-600 hover:text-primary transition-colors">linkedin.com/in/maxine-mutasam</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium">GitHub</h3>
+                                    <a href="https://github.com/maxine-mutasam" target="_blank" class="text-gray-600 hover:text-primary transition-colors">github.com/maxine-mutasam</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium">Twitter</h3>
+                                    <a href="https://twitter.com/maxineDev" target="_blank" class="text-gray-600 hover:text-primary transition-colors">@maxineDev</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 Maxine Mutasam | Designed & Developed by Me</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-full opacity-0 transition-all duration-300">
+        Thank you—your message has been sent!
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html> 

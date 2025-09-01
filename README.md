@@ -69,4 +69,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Contact
 
-For any questions or suggestions, please reach out to maxine@example.com
+For any questions or suggestions, please reach out to maxinemutasa00@gmail.com

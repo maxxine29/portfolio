@@ -1,0 +1,38 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with glass effect -->
+  <circle cx="16" cy="16" r="15" fill="url(#bgGradient)" stroke="url(#borderGradient)" stroke-width="2"/>
+  
+  <!-- Letter M with modern styling -->
+  <path d="M8 24V8h3.5l4 8 4-8H23v16h-3V13l-3.5 7h-1L11.5 13v11H8Z" fill="url(#textGradient)"/>
+  
+  <!-- Accent dot -->
+  <circle cx="24" cy="8" r="2" fill="url(#accentGradient)"/>
+  
+  <!-- Gradients -->
+  <defs>
+    <!-- Background gradient -->
+    <radialGradient id="bgGradient" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0b0e14" stop-opacity="0.9"/>
+    </radialGradient>
+    
+    <!-- Border gradient -->
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.6"/>
+    </linearGradient>
+    
+    <!-- Text gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e6e6e6"/>
+    </linearGradient>
+    
+    <!-- Accent gradient -->
+    <radialGradient id="accentGradient" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </radialGradient>
+  </defs>
+</svg>

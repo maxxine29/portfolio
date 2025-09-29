@@ -44,13 +44,13 @@ export default function HeroExpressive({
   marqueeItems,
 }: HeroExpressiveProps) {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20 relative">
+    <section className="min-h-screen flex items-center justify-center px-3 sm:px-6 py-12 sm:py-20 relative">
       {/* Grain overlay */}
       <div className="grain" />
       
       <div className="max-w-6xl mx-auto">
         <motion.div
-          className="text-center max-w-4xl mx-auto"
+          className="text-center max-w-4xl mx-auto w-full"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -58,7 +58,7 @@ export default function HeroExpressive({
           {/* Main Headline */}
           <motion.div className="mb-8" variants={itemVariants}>
             <h1 
-              className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6"
+              className="text-lg sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 sm:mb-6 px-1"
               style={{ fontFamily: "var(--font-dm)" }}
             >
               <span className="text-white">{headlineParts[0]}</span>{" "}
@@ -69,18 +69,18 @@ export default function HeroExpressive({
             </h1>
             
             {/* Animated SVG Underline */}
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-6 sm:mb-8">
               <svg 
                 width="100%" 
-                height="8" 
+                height="6" 
                 viewBox="0 0 400 8" 
-                className="max-w-md"
+                className="max-w-xs sm:max-w-md"
                 aria-hidden="true"
               >
                 <path
                   d="M10,4 Q200,0 390,4"
                   stroke="url(#gradient)"
-                  strokeWidth="4"
+                  strokeWidth="3"
                   strokeLinecap="round"
                   fill="none"
                   strokeDasharray="0,400"
@@ -107,7 +107,7 @@ export default function HeroExpressive({
 
           {/* Subheading */}
           <motion.p
-            className="text-xl md:text-2xl text-zinc-300 mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl text-zinc-300 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-2"
             variants={itemVariants}
           >
             {subheading}
@@ -115,7 +115,7 @@ export default function HeroExpressive({
 
           {/* Marquee */}
           <motion.div 
-            className="mb-16"
+            className="mb-8 sm:mb-16"
             variants={itemVariants}
           >
             <Marquee 
@@ -127,30 +127,30 @@ export default function HeroExpressive({
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2"
             variants={itemVariants}
           >
             <Link
               href={primaryCta.href}
-              className="btn-primary inline-flex items-center gap-2 px-8 py-4 text-lg group"
+              className="btn-primary inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg group w-full sm:w-auto justify-center"
             >
               {primaryCta.text}
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform duration-200" />
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-200" />
             </Link>
             <Link
               href={secondaryCta.href}
-              className="btn-glass inline-flex items-center gap-2 px-8 py-4 text-lg group"
+              className="btn-glass inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg group w-full sm:w-auto justify-center"
             >
-              <Sparkles size={20} className="group-hover:rotate-12 transition-transform duration-200" />
+              <Sparkles size={18} className="group-hover:rotate-12 transition-transform duration-200" />
               {secondaryCta.text}
             </Link>
           </motion.div>
         </motion.div>
 
-        {/* Floating Glass Cards */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Floating Glass Cards - Hidden on mobile for better UX */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden hidden sm:block">
           <motion.div
-            className="absolute top-1/4 left-1/4 w-32 h-32 glass rounded-2xl"
+            className="absolute top-1/4 left-1/4 w-24 sm:w-32 h-24 sm:h-32 glass rounded-2xl"
             animate={{
               y: [-10, 10, -10],
               rotate: [0, 5, 0],
@@ -163,7 +163,7 @@ export default function HeroExpressive({
             style={{ animationDelay: "0s" }}
           />
           <motion.div
-            className="absolute top-1/3 right-1/4 w-24 h-24 glass-strong rounded-xl"
+            className="absolute top-1/3 right-1/4 w-16 sm:w-24 h-16 sm:h-24 glass-strong rounded-xl"
             animate={{
               y: [10, -10, 10],
               rotate: [0, -5, 0],
@@ -176,7 +176,7 @@ export default function HeroExpressive({
             style={{ animationDelay: "2s" }}
           />
           <motion.div
-            className="absolute bottom-1/4 left-1/3 w-20 h-20 glass rounded-xl"
+            className="absolute bottom-1/4 left-1/3 w-12 sm:w-20 h-12 sm:h-20 glass rounded-xl"
             animate={{
               y: [-8, 8, -8],
               rotate: [0, 3, 0],
@@ -189,7 +189,7 @@ export default function HeroExpressive({
             style={{ animationDelay: "4s" }}
           />
           <motion.div
-            className="absolute bottom-1/3 right-1/3 w-28 h-28 glass-strong rounded-2xl"
+            className="absolute bottom-1/3 right-1/3 w-20 sm:w-28 h-20 sm:h-28 glass-strong rounded-2xl"
             animate={{
               y: [8, -8, 8],
               rotate: [0, -3, 0],

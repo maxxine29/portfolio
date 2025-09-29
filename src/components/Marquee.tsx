@@ -46,7 +46,7 @@ export default function Marquee({
       {/* Visual marquee */}
       <div className="relative marquee-container">
         <ul 
-          className={`flex items-center gap-8 whitespace-nowrap ${
+          className={`flex items-center gap-4 sm:gap-6 md:gap-8 whitespace-nowrap ${
             isReducedMotion 
               ? "animate-none" 
               : "motion-safe:marquee animate-[slide_18s_linear_infinite] group-hover:[animation-play-state:paused]"
@@ -60,7 +60,7 @@ export default function Marquee({
           {duplicatedItems.map((item, index) => (
             <li 
               key={index}
-              className="flex-shrink-0 px-4 py-2 text-sm font-medium text-zinc-400 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm"
+              className="flex-shrink-0 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-zinc-400 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm"
             >
               {item}
             </li>

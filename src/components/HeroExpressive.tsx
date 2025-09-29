@@ -44,7 +44,7 @@ export default function HeroExpressive({
   marqueeItems,
 }: HeroExpressiveProps) {
   return (
-    <section className="min-h-screen flex items-center justify-center px-3 sm:px-6 py-12 sm:py-20 relative">
+    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-8 sm:py-12 md:py-20 relative">
       {/* Grain overlay */}
       <div className="grain" />
       
@@ -58,7 +58,7 @@ export default function HeroExpressive({
           {/* Main Headline */}
           <motion.div className="mb-8" variants={itemVariants}>
             <h1 
-              className="text-lg sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 sm:mb-6 px-1"
+              className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 sm:mb-6 px-2"
               style={{ fontFamily: "var(--font-dm)" }}
             >
               <span className="text-white">{headlineParts[0]}</span>{" "}
@@ -69,18 +69,18 @@ export default function HeroExpressive({
             </h1>
             
             {/* Animated SVG Underline */}
-            <div className="flex justify-center mb-6 sm:mb-8">
+            <div className="flex justify-center mb-4 sm:mb-6 md:mb-8">
               <svg 
                 width="100%" 
-                height="6" 
+                height="4" 
                 viewBox="0 0 400 8" 
-                className="max-w-xs sm:max-w-md"
+                className="max-w-[200px] sm:max-w-xs md:max-w-sm"
                 aria-hidden="true"
               >
                 <path
                   d="M10,4 Q200,0 390,4"
                   stroke="url(#gradient)"
-                  strokeWidth="3"
+                  strokeWidth="2"
                   strokeLinecap="round"
                   fill="none"
                   strokeDasharray="0,400"
@@ -107,7 +107,7 @@ export default function HeroExpressive({
 
           {/* Subheading */}
           <motion.p
-            className="text-lg sm:text-xl md:text-2xl text-zinc-300 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-2"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-zinc-300 mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed px-3"
             variants={itemVariants}
           >
             {subheading}
@@ -115,33 +115,33 @@ export default function HeroExpressive({
 
           {/* Marquee */}
           <motion.div 
-            className="mb-8 sm:mb-16"
+            className="mb-6 sm:mb-8 md:mb-12 lg:mb-16"
             variants={itemVariants}
           >
             <Marquee 
               items={marqueeItems}
               durationMs={18000}
-              className="max-w-4xl mx-auto"
+              className="max-w-3xl sm:max-w-4xl mx-auto px-2"
             />
           </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-3 sm:px-2"
             variants={itemVariants}
           >
             <Link
               href={primaryCta.href}
-              className="btn-primary inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg group w-full sm:w-auto justify-center"
+              className="btn-primary inline-flex items-center gap-2 px-5 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg group w-full sm:w-auto justify-center min-h-[48px]"
             >
               {primaryCta.text}
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-200" />
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200 sm:w-5 sm:h-5" />
             </Link>
             <Link
               href={secondaryCta.href}
-              className="btn-glass inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg group w-full sm:w-auto justify-center"
+              className="btn-glass inline-flex items-center gap-2 px-5 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg group w-full sm:w-auto justify-center min-h-[48px]"
             >
-              <Sparkles size={18} className="group-hover:rotate-12 transition-transform duration-200" />
+              <Sparkles size={16} className="group-hover:rotate-12 transition-transform duration-200 sm:w-5 sm:h-5" />
               {secondaryCta.text}
             </Link>
           </motion.div>

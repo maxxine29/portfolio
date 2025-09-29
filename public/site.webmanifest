@@ -1,0 +1,19 @@
+{
+  "name": "Maxine Mutasa Portfolio",
+  "short_name": "Maxine",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "theme_color": "#7c3aed",
+  "background_color": "#0b0e14",
+  "display": "standalone"
+}

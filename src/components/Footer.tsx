@@ -139,9 +139,6 @@ export default function Footer() {
             <p className="text-zinc-400 text-sm">
               © {currentYear} Maxine Mutasa. All rights reserved.
             </p>
-            <p className="text-zinc-400 text-sm flex items-center gap-1">
-              Made with <Heart size={16} className="text-red-400" /> using Next.js
-            </p>
           </motion.div>
         </motion.div>
       </div>

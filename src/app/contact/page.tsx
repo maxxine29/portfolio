@@ -36,10 +36,10 @@ const contactInfo = [
     href: "mailto:maxinemutasa00@gmail.com"
   },
   {
-    icon: <Phone size={24} />,
-    label: "Phone",
-    value: "+263783062941",
-    href: "tel:+263783062941"
+    icon: <Github size={24} />,
+    label: "GitHub",
+    value: "maxxine29@github.com",
+    href: "https://github.com/maxxine29"
   },
   {
     icon: <MapPin size={24} />,

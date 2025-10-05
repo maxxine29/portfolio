@@ -190,6 +190,83 @@ export default function About() {
               </div>
             </motion.div>
 
+            {/* Achievements Section */}
+            <motion.div className="mb-16" variants={itemVariants}>
+              <h2 
+                className="text-3xl font-semibold text-center mb-12"
+                style={{ fontFamily: "var(--font-dm)" }}
+              >
+                Achievements & Recognition
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <motion.div
+                  className="glass p-6 rounded-xl hover:glass-strong transition-all duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                >
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="text-2xl">🏆</div>
+                    <div>
+                      <h3 
+                        className="text-lg font-semibold mb-2"
+                        style={{ fontFamily: "var(--font-dm)" }}
+                      >
+                        3rd Place - International Ideathon 2022
+                      </h3>
+                      <p className="text-cyan-400 text-sm mb-2">NICE School of Business Studies, India</p>
+                      <p className="text-zinc-300 text-sm mb-3">
+                        Medical courier service idea - delivering medication to customers&apos; doorstep. 
+                        Beat 19 competing teams from various universities.
+                      </p>
+                      <a 
+                        href="https://aunews.africau.edu/two-female-au-students-bold-chronic-medication-delivery-system-idea-clinches-3rd-place-in-international-ideathon/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent hover:text-accent/80 transition-colors text-sm underline"
+                      >
+                        Read full article →
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  className="glass p-6 rounded-xl hover:glass-strong transition-all duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="text-2xl">🚀</div>
+                    <div>
+                      <h3 
+                        className="text-lg font-semibold mb-2"
+                        style={{ fontFamily: "var(--font-dm)" }}
+                      >
+                        Global Appathon Qualifier
+                      </h3>
+                      <p className="text-cyan-400 text-sm mb-2">Computer Science Society of Zimbabwe & The @ Company</p>
+                      <p className="text-zinc-300 text-sm mb-3">
+                        Part of 9-student team that qualified for second track of global appathon. 
+                        Beat 10 local teams with innovative @protocol application.
+                      </p>
+                      <a 
+                        href="https://aunews.africau.edu/au-student-team-of-software-engineers-qualifies-for-second-track-in-global-appathon-competition/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent hover:text-accent/80 transition-colors text-sm underline"
+                      >
+                        Read full article →
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+
             {/* Experience Section */}
             <motion.div variants={itemVariants}>
               <h2 

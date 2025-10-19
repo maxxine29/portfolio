@@ -41,7 +41,6 @@ const projects = [
     impact: "40% increase in user engagement",
     tech: ["Django", "Vue.js", "Bootstrap 4", "PostgreSQL"],
     liveUrl: "https://jobhunters.co.zw",
-    githubUrl: "https://github.com/example",
     featured: true
   },
   {
@@ -55,7 +54,6 @@ const projects = [
     impact: "50% faster user onboarding",
     tech: ["Vue.js", "Django", "Bootstrap"],
     liveUrl: "https://caregraphy.com",
-    githubUrl: "https://github.com/example",
     featured: true
   },
   {
@@ -69,7 +67,6 @@ const projects = [
     impact: "30% increase in inquiries",
     tech: ["Next.js", "Django", "Tailwind CSS"],
     liveUrl: "https://www.beasophtmedia.co.zw/",
-    githubUrl: "https://github.com/example",
     featured: false
   },
   {
@@ -83,12 +80,24 @@ const projects = [
     impact: "99.9% uptime during events",
     tech: ["Vue.js", "Laravel", "Tailwind CSS", "Bootstrap 4"],
     liveUrl: "https://magetsi.co.zw",
-    githubUrl: "https://github.com/example",
+    featured: true
+  },
+  {
+    id: "5",
+    title: "UK Navigator",
+    description: "A web platform helping people quickly find companies licensed to sponsor work visas in the UK.",
+    longDescription: "A comprehensive directory and search platform that simplifies the process of finding UK companies authorized to sponsor work visas, making immigration easier for international professionals.",
+    image: "/images/uknavigator.png",
+    tags: ["Full Stack", "Immigration", "Directory"],
+    role: "Full Stack Developer",
+    impact: "Streamlined visa sponsor search process",
+    tech: ["React", "Node.js", "Database", "API Integration"],
+    liveUrl: "https://uknavigator.co.uk",
     featured: true
   }
 ];
 
-const categories = ["All", "Frontend", "Backend", "Full Stack", "Business", "Events"];
+const categories = ["All", "Frontend", "Backend", "Full Stack", "Business", "Events", "Immigration", "Directory"];
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");

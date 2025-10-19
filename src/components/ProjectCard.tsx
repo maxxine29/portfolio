@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 
 interface Project {
@@ -15,7 +15,6 @@ interface Project {
   impact: string;
   tech: string[];
   liveUrl?: string;
-  githubUrl?: string;
   featured?: boolean;
 }
 
@@ -87,17 +86,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 aria-label={`View ${project.title} live site`}
               >
                 <ExternalLink size={16} className="text-white" />
-              </a>
-            )}
-            {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-colors duration-200"
-                aria-label={`View ${project.title} source code`}
-              >
-                <Github size={16} className="text-white" />
               </a>
             )}
           </div>

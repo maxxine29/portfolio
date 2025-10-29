@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, FileText } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Project {
   id: string;
@@ -15,6 +16,7 @@ interface Project {
   impact: string;
   tech: string[];
   liveUrl?: string;
+  caseStudyUrl?: string;
   featured?: boolean;
 }
 
@@ -77,6 +79,15 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           
           {/* Action Buttons */}
           <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {project.caseStudyUrl && (
+              <Link
+                href={project.caseStudyUrl}
+                className="p-2 bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-colors duration-200"
+                aria-label={`View ${project.title} case study`}
+              >
+                <FileText size={16} className="text-white" />
+              </Link>
+            )}
             {project.liveUrl && (
               <a
                 href={project.liveUrl}

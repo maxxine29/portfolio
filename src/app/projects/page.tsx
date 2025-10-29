@@ -88,11 +88,12 @@ const projects = [
     description: "A web platform helping people quickly find companies licensed to sponsor work visas in the UK.",
     longDescription: "A comprehensive directory and search platform that simplifies the process of finding UK companies authorized to sponsor work visas, making immigration easier for international professionals.",
     image: "/images/uknavigator.png",
-    tags: ["Full Stack", "Immigration", "Directory"],
-    role: "Full Stack Developer",
+    tags: ["UX Design", "Immigration", "Directory"],
+    role: "UX Designer & Product Thinker",
     impact: "Streamlined visa sponsor search process",
-    tech: ["React", "Node.js", "Database", "API Integration"],
+    tech: ["Figma", "FigJam", "UX Research", "UI Design"],
     liveUrl: "https://uknavigator.co.uk",
+    caseStudyUrl: "/case-studies/uk-navigator",
     featured: true
   }
 ];
@@ -136,9 +137,12 @@ export default function Projects() {
               >
                 My <span className="text-gradient">Projects</span>
               </h1>
-              <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
+              <p className="text-xl text-zinc-300 max-w-2xl mx-auto mb-4">
                 A collection of projects that showcase my skills and passion for creating 
                 exceptional digital experiences.
+              </p>
+              <p className="text-sm text-zinc-400">
+                Want to see detailed case studies? <a href="/case-studies" className="text-accent hover:text-accent/80 transition-colors underline">View Case Studies →</a>
               </p>
             </motion.div>
 

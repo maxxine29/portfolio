@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -46,6 +46,7 @@ const socialLinks = [
 
 const quickLinks = [
   { label: "Home", href: "/" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "Projects", href: "/projects" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" }

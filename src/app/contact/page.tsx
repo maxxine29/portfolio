@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const containerVariants = {

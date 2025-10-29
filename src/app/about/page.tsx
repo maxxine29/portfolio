@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Palette, Zap, Users } from "lucide-react";
+import { Code, Palette, Zap, Users, Award } from "lucide-react";
 import Image from "next/image";
 import Layout from "@/components/Layout";
 
@@ -30,6 +30,11 @@ const itemVariants = {
 
 const skills = [
   {
+    category: "UI/UX Design",
+    icon: <Palette size={24} />,
+    skills: ["UX Research", "Wireframing", "Prototyping", "User Testing", "Design Systems", "Figma", "FigJam"]
+  },
+  {
     category: "Frontend",
     icon: <Code size={24} />,
     skills: ["Vue.js", "React", "Next.js", "Tailwind CSS", "Bootstrap"]
@@ -40,23 +45,18 @@ const skills = [
     skills: ["Django", "Laravel", "Python", "PHP", "PostgreSQL"]
   },
   {
-    category: "Design",
-    icon: <Palette size={24} />,
-    skills: ["UI/UX Design", "Figma", "Adobe Creative Suite", "Design Systems"]
-  },
-  {
     category: "Tools",
     icon: <Users size={24} />,
-    skills: ["Git", "Docker", "Vercel", "Figma", "Notion"]
+    skills: ["Git", "Docker", "Vercel", "Notion", "Adobe Creative Suite"]
   }
 ];
 
 const experience = [
   {
-    role: "Junior Software Engineer",
+    role: "Junior Software Engineer & UI/UX Designer",
     company: "Magetsi",
     period: "September 2024 – Present",
-    description: "Solely responsible for Events and Tickets functionality (backend and frontend) using Vue.js, Bootstrap 4, and Laravel. Leading UI/UX design efforts as part of a collaborative team."
+    description: "Solely responsible for Events and Tickets functionality (backend and frontend) using Vue.js, Bootstrap 4, and Laravel. Leading UI/UX design efforts, conducting user research, and creating wireframes and prototypes using Figma. Working collaboratively to improve user experience and accessibility."
   },
   {
     role: "Freelance Web Developer",
@@ -122,19 +122,44 @@ export default function About() {
                 </h2>
                 <div className="space-y-4 text-zinc-300 leading-relaxed">
                   <p>
-                    I am a Junior Software Engineer with a passion for frontend development and UI/UX design. 
-                    During my internship at Nubiacom as a Software Developer Intern, I worked on fullstack 
-                    development for <a href="https://jobhunters.co.zw" className="text-accent hover:text-accent/80 transition-colors underline" target="_blank">JobHunters</a> using Django, Bootstrap 4, and Vue.js.
+                    I am a design-minded engineer transitioning from software engineering into UI/UX design. 
+                    My journey began in fullstack development, working with technologies like Django, Vue.js, and Laravel,
+                    but I discovered my true passion lies in creating intuitive, user-centered interfaces that bridge 
+                    the gap between beautiful design and functional code.
                   </p>
                   <p>
-                    I also contributed to <a href="https://caregraphy.com" className="text-accent hover:text-accent/80 transition-colors underline" target="_blank">Caregraphy</a> on the frontend using Vue.js and Bootstrap. 
-                    I freelance at <a href="https://www.beasophtmedia.co.zw/" className="text-accent hover:text-accent/80 transition-colors underline" target="_blank">BEASOPHT Media</a>, 
-                    where I built the website with Django and Next.js.
+                    During my time as a Software Developer Intern at Nubiacom, I worked on fullstack 
+                    development for <a href="https://jobhunters.co.zw" className="text-accent hover:text-accent/80 transition-colors underline" target="_blank">JobHunters</a> using Django, Bootstrap 4, and Vue.js,
+                    and contributed to <a href="https://caregraphy.com" className="text-accent hover:text-accent/80 transition-colors underline" target="_blank">Caregraphy</a> on the frontend. 
+                    I also freelance at <a href="https://www.beasophtmedia.co.zw/" className="text-accent hover:text-accent/80 transition-colors underline" target="_blank">BEASOPHT Media</a>, 
+                    where I built their website with Django and Next.js.
                   </p>
                   <p>
-                    I currently work at <a href="https://magetsi.co.zw" className="text-accent hover:text-accent/80 transition-colors underline" target="_blank">Magetsi</a> as a Junior Software Engineer. 
-                    I am solely responsible for the Events and Tickets functionality, handling both backend and frontend 
-                    using Vue.js, Bootstrap 4, and Laravel, as well as leading UI/UX design efforts as part of a collaborative team.
+                    Currently, I work at <a href="https://magetsi.co.zw" className="text-accent hover:text-accent/80 transition-colors underline" target="_blank">Magetsi</a> as a Junior Software Engineer, 
+                    where I&apos;m solely responsible for the Events and Tickets functionality. This role has been instrumental 
+                    in my transition—I handle both backend and frontend development using Vue.js, Bootstrap 4, and Laravel, 
+                    while leading UI/UX design efforts as part of a collaborative team.
+                  </p>
+                  <p>
+                    <strong className="text-white">My transition to UI/UX design:</strong> What started as a technical 
+                    challenge has evolved into a passion for understanding user needs, crafting thoughtful experiences, 
+                    and solving complex problems through design. My engineering background gives me a unique advantage—I 
+                    understand both the creative possibilities and technical constraints, allowing me to design solutions 
+                    that are not just beautiful, but also feasible and performant.
+                  </p>
+                </div>
+                <div className="p-6 glass rounded-xl mt-6">
+                  <h3 
+                    className="text-xl font-semibold mb-3"
+                    style={{ fontFamily: "var(--font-dm)" }}
+                  >
+                    Design Philosophy
+                  </h3>
+                  <p className="text-zinc-300 leading-relaxed">
+                    I love designing user-centered, intuitive interfaces that simplify complex systems. 
+                    Every design decision I make is grounded in research, empathy, and a deep understanding 
+                    of how users interact with digital products. I believe great design is invisible—users 
+                    shouldn&apos;t have to think about how to use something; it should feel natural and effortless.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-3">
@@ -187,6 +212,97 @@ export default function About() {
                     </div>
                   </motion.div>
                 ))}
+              </div>
+            </motion.div>
+
+            {/* Certifications Section */}
+            <motion.div className="mb-16" variants={itemVariants}>
+              <h2 
+                className="text-3xl font-semibold text-center mb-12"
+                style={{ fontFamily: "var(--font-dm)" }}
+              >
+                Certifications
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <motion.div
+                  className="glass p-6 rounded-xl hover:glass-strong transition-all duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                >
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="text-cyan-400">
+                      <Award size={24} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 
+                        className="text-lg font-semibold mb-2"
+                        style={{ fontFamily: "var(--font-dm)" }}
+                      >
+                        Start the UX Design Process: Empathize, Define, and Ideate
+                      </h3>
+                      <p className="text-cyan-400 text-sm mb-2">Google via Coursera</p>
+                      <p className="text-zinc-400 text-xs mb-3">Completed October 19, 2025 • 21 hours</p>
+                      <p className="text-zinc-300 text-sm mb-3">
+                        Learned to empathize with users, develop problem statements, and generate 
+                        ideas for user-centered solutions. Gained skills in user research, personas, 
+                        user flows, and competitive analysis.
+                      </p>
+                      <a 
+                        href="https://coursera.org/share/8255c23dd4db070972701e18760243d5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent hover:text-accent/80 transition-colors text-sm underline inline-flex items-center gap-1"
+                      >
+                        View Certificate
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  className="glass p-6 rounded-xl hover:glass-strong transition-all duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="text-cyan-400">
+                      <Award size={24} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 
+                        className="text-lg font-semibold mb-2"
+                        style={{ fontFamily: "var(--font-dm)" }}
+                      >
+                        Foundations of User Experience (UX) Design
+                      </h3>
+                      <p className="text-cyan-400 text-sm mb-2">Google via Coursera</p>
+                      <p className="text-zinc-400 text-xs mb-3">Completed July 19, 2025 • 13 hours</p>
+                      <p className="text-zinc-300 text-sm mb-3">
+                        Learned foundational UX concepts including user-centered design, the design 
+                        process, accessibility, wireframing, prototyping, and design sprints. 
+                        Understood the role of UX designers and cross-functional collaboration.
+                      </p>
+                      <a 
+                        href="https://coursera.org/share/596d988855e4c331bcda45c55734cf14"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent hover:text-accent/80 transition-colors text-sm underline inline-flex items-center gap-1"
+                      >
+                        View Certificate
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
 

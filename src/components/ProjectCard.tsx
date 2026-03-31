@@ -50,6 +50,9 @@ const hoverVariants = {
 };
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
+  const link = project.caseStudyUrl || project.liveUrl || "#";
+  const isExternal = !!project.liveUrl;
+
   return (
     <motion.div
       className="group"
@@ -66,24 +69,35 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         }`}
         variants={hoverVariants}
       >
-        {/* Project Image */}
+        {/* CLICKABLE IMAGE */}
         <div className="relative mb-6 rounded-xl overflow-hidden">
-          <Image
-            src={project.image}
-            alt={project.title}
-            width={400}
-            height={250}
-            className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          
-          {/* Action Buttons */}
+          <Link
+            href={link}
+            target={isExternal ? "_blank" : "_self"}
+            className="block"
+          >
+            <div className="relative cursor-pointer group">
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={400}
+                height={250}
+                className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-sm font-medium">
+                View Project
+              </div>
+            </div>
+          </Link>
+
+          {/* Action Buttons (still available) */}
           <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             {project.caseStudyUrl && (
               <Link
                 href={project.caseStudyUrl}
                 className="p-2 bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-colors duration-200"
-                aria-label={`View ${project.title} case study`}
               >
                 <FileText size={16} className="text-white" />
               </Link>
@@ -94,7 +108,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-colors duration-200"
-                aria-label={`View ${project.title} live site`}
               >
                 <ExternalLink size={16} className="text-white" />
               </a>
@@ -106,7 +119,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         <div className="flex-1 flex flex-col">
           {/* Title & Role */}
           <div className="mb-3">
-            <h3 
+            <h3
               className="text-xl font-semibold mb-1"
               style={{ fontFamily: "var(--font-dm)" }}
             >
@@ -120,7 +133,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             {project.description}
           </p>
 
-          {/* Impact Metric */}
+          {/* Impact */}
           {project.impact && (
             <div className="mb-4 p-3 bg-white/5 rounded-lg">
               <p className="text-sm text-cyan-400 font-medium">
@@ -160,12 +173,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   );
 }
 
-// Project Grid Component
-interface ProjectGridProps {
-  projects: Project[];
-}
-
-export function ProjectGrid({ projects }: ProjectGridProps) {
+// Grid stays the same
+export function ProjectGrid({ projects }: { projects: Project[] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {projects.map((project, index) => (
